@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CAD Gallery | Rithik Bala</title>
+  <meta name="description" content="CAD gallery of robotic mechanisms, manipulators, drone frames, and mechanical design concepts by Rithik Bala." />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="cursor-glow"></div>
+  <div class="noise-layer"></div>
+  <div class="scanline-layer"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container">
+      <a href="index.html" class="logo"><span>RB</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="cad-gallery.html" class="nav-link active">CAD Gallery</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="grid-overlay"></div>
+      <div class="container page-hero-inner reveal">
+        <p class="eyebrow">
+          <span class="pulse-dot"></span>
+          CAD DESIGN ARCHIVE
+        </p>
+        <h1>Mechanical ideas visualized before they move.</h1>
+        <p>
+          A gallery for robotic mechanisms, manipulators, drone frames,
+          structural concepts, and design experiments.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="robots">Robots</button>
+          <button class="filter-btn" data-filter="manipulators">Manipulators</button>
+          <button class="filter-btn" data-filter="drones">Drones</button>
+          <button class="filter-btn" data-filter="mechanisms">Mechanisms</button>
+          <button class="filter-btn" data-filter="concepts">Concepts</button>
+        </div>
+
+        <div class="cad-grid">
+          <article class="cad-card reveal" data-category="manipulators">
+            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-delta.jpg');"></div>
+            <div class="cad-content">
+              <span class="cad-category">Manipulator</span>
+              <h2>Delta Manipulator CAD</h2>
+              <p>Parallel robotic mechanism designed for compact motion and future digital twin testing.</p>
+              <span class="software-pill">Fusion 360 / SolidWorks</span>
+            </div>
+          </article>
+
+          <article class="cad-card reveal delay-1" data-category="robots">
+            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-hexapod.jpg');"></div>
+            <div class="cad-content">
+              <span class="cad-category">Robot Structure</span>
+              <h2>Hexapod Structure</h2>
+              <p>Six-legged robot body and leg mechanism concept for servo-based walking motion.</p>
+              <span class="software-pill">CAD Model</span>
+            </div>
+          </article>
+
+          <article class="cad-card reveal delay-2" data-category="drones">
+            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-drone.jpg');"></div>
+            <div class="cad-content">
+              <span class="cad-category">Drone</span>
+              <h2>Drone Concept Frame</h2>
+              <p>Conceptual UAV frame layout for drone-based applications and future swarm systems.</p>
+              <span class="software-pill">CAD Concept</span>
+            </div>
+          </article>
+
+          <article class="cad-card reveal delay-1" data-category="mechanisms">
+            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-joint.jpg');"></div>
+            <div class="cad-content">
+              <span class="cad-category">Mechanism</span>
+              <h2>Robotic Joint Concept</h2>
+              <p>Joint and linkage concept for robotic movement studies and mechanical experimentation.</p>
+              <span class="software-pill">Mechanical Design</span>
+            </div>
+          </article>
+
+          <article class="cad-card reveal delay-2" data-category="mechanisms">
+            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-linkage.jpg');"></div>
+            <div class="cad-content">
+              <span class="cad-category">Linkage</span>
+              <h2>Mechanical Linkage</h2>
+              <p>Linkage design study for understanding constrained motion and mechanical transmission.</p>
+              <span class="software-pill">CAD Study</span>
+            </div>
+          </article>
+
+          <article class="cad-card reveal delay-3" data-category="concepts">
+            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-effector.jpg');"></div>
+            <div class="cad-content">
+              <span class="cad-category">Concept</span>
+              <h2>End Effector Concept</h2>
+              <p>Conceptual robotic end effector design for manipulation and future prototyping.</p>
+              <span class="software-pill">Design Concept</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Rithik Bala.</p>
+      <p class="footer-command">&gt; cad.gallery: active</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

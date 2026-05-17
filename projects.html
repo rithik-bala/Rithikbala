@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Projects | Rithik Bala</title>
+  <meta name="description" content="Robotics, CAD, embedded systems, automation, and AI projects by Rithik Bala." />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <div class="cursor-glow"></div>
+  <div class="noise-layer"></div>
+  <div class="scanline-layer"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar container">
+      <a href="index.html" class="logo"><span>RB</span></a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="nav-menu" id="navMenu">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="cad-gallery.html" class="nav-link">CAD Gallery</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
+          <span class="theme-icon">◐</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="grid-overlay"></div>
+      <div class="container page-hero-inner reveal">
+        <p class="eyebrow">
+          <span class="pulse-dot"></span>
+          PROJECT ARCHIVE
+        </p>
+        <h1>Mission-based engineering builds.</h1>
+        <p>
+          Robotics, CAD, automation, UAV systems, simulation concepts, and AI-driven
+          technical projects arranged as mission logs.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="project-bento-grid">
+          <article class="project-card project-feature reveal tilt-card">
+            <div class="project-media image-fallback" style="--image: url('assets/images/project-hexapod.jpg');"></div>
+            <div class="mission-label">RB-M01 / MISSION 01</div>
+            <h2>Hexapod Robot</h2>
+            <p>
+              A 6-legged robotic platform with 18 DOF using MG995 servos,
+              Arduino Nano, PCA9685 servo driver, and tripod gait motion.
+            </p>
+            <div class="tag-row">
+              <span>Arduino</span>
+              <span>PCA9685</span>
+              <span>MG995</span>
+              <span>Tripod Gait</span>
+              <span>Robotics</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="mini-btn">GitHub</a>
+              <a href="#" class="mini-btn">Demo</a>
+              <a href="#" class="mini-btn">Details</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-1 tilt-card">
+            <div class="project-media image-fallback" style="--image: url('assets/images/project-delta.jpg');"></div>
+            <div class="mission-label">RB-M02 / MISSION 02</div>
+            <h2>Delta Manipulator</h2>
+            <p>
+              A compact parallel manipulator concept focused on mechanical motion,
+              CAD modeling, and future robotic control integration.
+            </p>
+            <div class="tag-row">
+              <span>CAD</span>
+              <span>Manipulator</span>
+              <span>Mechanism</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="mini-btn">GitHub</a>
+              <a href="#" class="mini-btn">Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-2 tilt-card">
+            <div class="project-media image-fallback" style="--image: url('assets/images/project-digital-twin.jpg');"></div>
+            <div class="mission-label">RB-M03 / MISSION 03</div>
+            <h2>Delta Manipulator Digital Twin</h2>
+            <p>
+              A digital twin direction for visualizing, simulating, and testing
+              manipulator motion before physical implementation.
+            </p>
+            <div class="tag-row">
+              <span>Digital Twin</span>
+              <span>Simulation</span>
+              <span>Robotics</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="mini-btn">GitHub</a>
+              <a href="#" class="mini-btn">Demo</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-1 tilt-card">
+            <div class="project-media image-fallback" style="--image: url('assets/images/project-uav.jpg');"></div>
+            <div class="mission-label">RB-M04 / MISSION 04</div>
+            <h2>UAV Medical Supply Delivery</h2>
+            <p>
+              A UAV application study focused on drone-based medical supply delivery
+              for non-agricultural use cases.
+            </p>
+            <div class="tag-row">
+              <span>UAV</span>
+              <span>Drones</span>
+              <span>Logistics</span>
+              <span>Research</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="mini-btn">Report</a>
+              <a href="#" class="mini-btn">Details</a>
+            </div>
+          </article>
+
+          <article class="project-card project-wide reveal delay-2 tilt-card">
+            <div class="project-media image-fallback" style="--image: url('assets/images/project-swarm.jpg');"></div>
+            <div class="mission-label">RB-M05 / MISSION 05</div>
+            <h2>Swarm Drone System</h2>
+            <p>
+              A concept for a multi-drone system capable of switching between
+              master-drone following and person-following modes, with possible
+              applications in mapping, surveillance, and defense-oriented scenarios.
+            </p>
+            <div class="tag-row">
+              <span>Swarm Robotics</span>
+              <span>Drones</span>
+              <span>Mapping</span>
+              <span>Autonomy</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="mini-btn">GitHub</a>
+              <a href="#" class="mini-btn">Concept</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-3 tilt-card">
+            <div class="project-media image-fallback" style="--image: url('assets/images/project-crisisgraph.jpg');"></div>
+            <div class="mission-label">RB-M06 / MISSION 06</div>
+            <h2>CrisisGraph AI</h2>
+            <p>
+              A multimodal AI system concept for anticipating and detecting cascading
+              global risks across climate, conflict, health, and economic domains.
+            </p>
+            <div class="tag-row">
+              <span>AI</span>
+              <span>Risk Systems</span>
+              <span>Data</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="mini-btn">GitHub</a>
+              <a href="#" class="mini-btn">Details</a>
+            </div>
+          </article>
+
+          <article class="project-card reveal delay-1 tilt-card">
+            <div class="project-media image-fallback"></div>
+            <div class="mission-label">RB-M07 / MISSION 07</div>
+            <h2>Portfolio Website</h2>
+            <p>
+              A static multi-page portfolio built with HTML, CSS, and JavaScript,
+              designed for GitHub Pages with a futuristic robotics interface.
+            </p>
+            <div class="tag-row">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>GitHub Pages</span>
+            </div>
+            <div class="card-actions">
+              <a href="#" class="mini-btn">GitHub</a>
+              <a href="#" class="mini-btn">Live</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Rithik Bala.</p>
+      <p class="footer-command">&gt; missions.loaded: 07</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
