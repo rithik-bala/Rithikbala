@@ -1,212 +1,460 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Projects | Rithik Bala</title>
-  <meta name="description" content="Robotics, CAD, embedded systems, automation, and AI projects by Rithik Bala." />
+  <title>Projects | RITHIK BALA</title>
+
+  <meta
+    name="description"
+    content="Projects by RITHIK BALA including robotics, CAD, digital twin, UAV, ROS 2, automation and AI systems."
+  />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <div class="cursor-glow"></div>
-  <div class="noise-layer"></div>
-  <div class="scanline-layer"></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
 
-  <header class="site-header" id="siteHeader">
-    <nav class="navbar container">
-      <a href="index.html" class="logo"><span>RB</span></a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-      </button>
+  <!-- GLOBAL EFFECTS -->
+  <div class="scroll-progress">
+    <span id="scrollProgressBar"></span>
+  </div>
 
-      <div class="nav-menu" id="navMenu">
+  <div class="cursor-halo"></div>
+  <div class="cursor-dot"></div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- HEADER -->
+  <header class="site-header">
+  <nav class="navbar container">
+    <a href="index.html" class="brand" aria-label="RITHIK BALA Home">
+      <span class="brand-glow"></span>
+      <span class="brand-mark">RB</span>
+    </a>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-panel" id="navPanel">
+      <div class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
-        <a href="projects.html" class="nav-link active">Projects</a>
+        <a href="projects.html" class="nav-link">Projects</a>
         <a href="cad-gallery.html" class="nav-link">CAD Gallery</a>
+        <a href="freelance.html" class="nav-link">Freelance</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
-          <span class="theme-icon">◐</span>
+      </div>
+
+      <div class="nav-tools">
+        <div class="system-clock" id="systemClock">SYS 00:00:00</div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span></span>
         </button>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <main>
-    <section class="page-hero">
-      <div class="grid-overlay"></div>
-      <div class="container page-hero-inner reveal">
+    <!-- PAGE HERO -->
+    <section class="page-hero section page-top">
+      <div class="container">
         <p class="eyebrow">
-          <span class="pulse-dot"></span>
-          PROJECT ARCHIVE
+          <span class="status-dot"></span>
+          MISSION FILES
         </p>
-        <h1>Mission-based engineering builds.</h1>
-        <p>
-          Robotics, CAD, automation, UAV systems, simulation concepts, and AI-driven
-          technical projects arranged as mission logs.
+
+        <h1 class="page-title">Projects</h1>
+
+        <p class="page-subtitle">
+          A curated archive of robotics, CAD, embedded systems, simulation,
+          digital twin, UAV, and AI-based engineering projects.
         </p>
       </div>
     </section>
 
-    <section class="section">
+    <!-- PROJECT FILTER BAR -->
+    <section class="filter-section">
       <div class="container">
-        <div class="project-bento-grid">
-          <article class="project-card project-feature reveal tilt-card">
-            <div class="project-media image-fallback" style="--image: url('assets/images/project-hexapod.jpg');"></div>
-            <div class="mission-label">RB-M01 / MISSION 01</div>
-            <h2>Hexapod Robot</h2>
+        <div class="filter-bar glass-card reveal">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="robotics">Robotics</button>
+          <button class="filter-btn" data-filter="cad">CAD</button>
+          <button class="filter-btn" data-filter="simulation">Simulation</button>
+          <button class="filter-btn" data-filter="uav">UAV</button>
+          <button class="filter-btn" data-filter="ai">AI</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="projects-section section">
+      <div class="container project-grid">
+        <!-- Project 1 -->
+        <article
+          class="project-card mission-file reveal"
+          data-filter-item="ai"
+          data-popup
+          data-title="CrisisGraph"
+          data-category="AI / Global Risk System"
+          data-status="Concept / Research Direction"
+          data-tools="AI, Risk Analysis, Data Systems"
+          data-description="A multimodal AI system concept for anticipating and detecting cascading global risks across climate, conflict, health, and economic signals."
+          data-image="assets/images/project-csirgraph.jpg"
+          data-tags="AI, Risk Analysis, Data Systems"
+        >
+          <div class="project-image scan-image">
+            <img
+              src="assets/images/project-csirgraph.jpg"
+              alt="CrisisGraph AI global risk system project"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="project-content">
+            <p class="mission-code">RB-M01 / MISSION FILE</p>
+
+            <h3>CrisisGraph</h3>
+
+            <div class="meta-grid">
+              <span>DOMAIN: AI</span>
+              <span>STATUS: Concept</span>
+            </div>
+
             <p>
-              A 6-legged robotic platform with 18 DOF using MG995 servos,
-              Arduino Nano, PCA9685 servo driver, and tripod gait motion.
+              A multimodal AI system concept for anticipating cascading global
+              risks.
             </p>
-            <div class="tag-row">
+
+            <div class="mini-tags">
+              <span>AI</span>
+              <span>Risk Analysis</span>
+              <span>Data Systems</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article
+          class="project-card mission-file reveal"
+          data-filter-item="robotics cad simulation"
+          data-popup
+          data-title="Delta Manipulator"
+          data-category="Robotics / CAD / Digital Twin"
+          data-status="Design + Digital Twin"
+          data-tools="CAD, Mechanism Design, Motion Study"
+          data-description="A delta manipulator design and digital twin project focused on mechanism design, simulation, and motion study."
+          data-image="assets/images/project-delta.jpg"
+          data-tags="Delta Robot, CAD, Digital Twin"
+        >
+          <div class="project-image scan-image">
+            <img
+              src="assets/images/project-delta.jpg"
+              alt="Delta Manipulator project"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="project-content">
+            <p class="mission-code">RB-M02 / MISSION FILE</p>
+
+            <h3>Delta Manipulator</h3>
+
+            <div class="meta-grid">
+              <span>DOMAIN: Robotics</span>
+              <span>STATUS: Design</span>
+            </div>
+
+            <p>
+              A delta manipulator design and digital twin project focused on
+              motion study.
+            </p>
+
+            <div class="mini-tags">
+              <span>Delta Robot</span>
+              <span>CAD</span>
+              <span>Digital Twin</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article
+          class="project-card mission-file reveal"
+          data-filter-item="simulation"
+          data-popup
+          data-title="Digital Twin Workflow"
+          data-category="Simulation / Automation"
+          data-status="Workflow System"
+          data-tools="Simulation, Digital Twin, Automation"
+          data-description="A simulation-first engineering workflow for visualizing and validating robotic systems before hardware implementation."
+          data-image="assets/images/project-digital-twin.jpg"
+          data-tags="Simulation, Digital Twin, Automation"
+        >
+          <div class="project-image scan-image">
+            <img
+              src="assets/images/project-digital-twin.jpg"
+              alt="Digital Twin Workflow project"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="project-content">
+            <p class="mission-code">RB-M03 / MISSION FILE</p>
+
+            <h3>Digital Twin Workflow</h3>
+
+            <div class="meta-grid">
+              <span>DOMAIN: Simulation</span>
+              <span>STATUS: Workflow</span>
+            </div>
+
+            <p>
+              A simulation-first workflow for validating robotic systems before
+              hardware.
+            </p>
+
+            <div class="mini-tags">
+              <span>Simulation</span>
+              <span>Digital Twin</span>
+              <span>Automation</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article
+          class="project-card mission-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="Hexapod Robot"
+          data-category="Robotics / Embedded Systems"
+          data-status="Prototype / Build System"
+          data-tools="Arduino Nano, PCA9685, MG995 Servos, Tripod Gait"
+          data-description="A 6-legged robot with 18 MG995 servos, Arduino Nano, PCA9685 servo driver, and tripod gait control."
+          data-image="assets/images/project-hexapod.jpg"
+          data-tags="Hexapod, Arduino, PCA9685, Servo Control"
+        >
+          <div class="project-image scan-image">
+            <img
+              src="assets/images/project-hexapod.jpg"
+              alt="Hexapod Robot project"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="project-content">
+            <p class="mission-code">RB-M04 / MISSION FILE</p>
+
+            <h3>Hexapod Robot</h3>
+
+            <div class="meta-grid">
+              <span>DOMAIN: Robotics</span>
+              <span>STATUS: Prototype</span>
+            </div>
+
+            <p>
+              A 6-legged robot with Arduino Nano, PCA9685 driver, MG995 servos,
+              and tripod gait.
+            </p>
+
+            <div class="mini-tags">
+              <span>Hexapod</span>
               <span>Arduino</span>
               <span>PCA9685</span>
-              <span>MG995</span>
-              <span>Tripod Gait</span>
-              <span>Robotics</span>
             </div>
-            <div class="card-actions">
-              <a href="#" class="mini-btn">GitHub</a>
-              <a href="#" class="mini-btn">Demo</a>
-              <a href="#" class="mini-btn">Details</a>
-            </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project-card reveal delay-1 tilt-card">
-            <div class="project-media image-fallback" style="--image: url('assets/images/project-delta.jpg');"></div>
-            <div class="mission-label">RB-M02 / MISSION 02</div>
-            <h2>Delta Manipulator</h2>
-            <p>
-              A compact parallel manipulator concept focused on mechanical motion,
-              CAD modeling, and future robotic control integration.
-            </p>
-            <div class="tag-row">
-              <span>CAD</span>
-              <span>Manipulator</span>
-              <span>Mechanism</span>
-            </div>
-            <div class="card-actions">
-              <a href="#" class="mini-btn">GitHub</a>
-              <a href="#" class="mini-btn">Demo</a>
-            </div>
-          </article>
+        <!-- Project 5 -->
+        <article
+          class="project-card mission-file reveal"
+          data-filter-item="uav robotics"
+          data-popup
+          data-title="Swarm Drone System"
+          data-category="UAV / Swarm Robotics"
+          data-status="Concept / System Architecture"
+          data-tools="UAV, Swarm Robotics, Mapping, Surveillance"
+          data-description="A swarm drone system concept capable of switching between master-drone following and person-following modes with mapping and surveillance use cases."
+          data-image="assets/images/project-swarm.jpg"
+          data-tags="UAV, Swarm, Mapping"
+        >
+          <div class="project-image scan-image">
+            <img
+              src="assets/images/project-swarm.jpg"
+              alt="Swarm Drone System project"
+              loading="lazy"
+            />
+          </div>
 
-          <article class="project-card reveal delay-2 tilt-card">
-            <div class="project-media image-fallback" style="--image: url('assets/images/project-digital-twin.jpg');"></div>
-            <div class="mission-label">RB-M03 / MISSION 03</div>
-            <h2>Delta Manipulator Digital Twin</h2>
-            <p>
-              A digital twin direction for visualizing, simulating, and testing
-              manipulator motion before physical implementation.
-            </p>
-            <div class="tag-row">
-              <span>Digital Twin</span>
-              <span>Simulation</span>
-              <span>Robotics</span>
-            </div>
-            <div class="card-actions">
-              <a href="#" class="mini-btn">GitHub</a>
-              <a href="#" class="mini-btn">Demo</a>
-            </div>
-          </article>
+          <div class="project-content">
+            <p class="mission-code">RB-M05 / MISSION FILE</p>
 
-          <article class="project-card reveal delay-1 tilt-card">
-            <div class="project-media image-fallback" style="--image: url('assets/images/project-uav.jpg');"></div>
-            <div class="mission-label">RB-M04 / MISSION 04</div>
-            <h2>UAV Medical Supply Delivery</h2>
+            <h3>Swarm Drone System</h3>
+
+            <div class="meta-grid">
+              <span>DOMAIN: UAV</span>
+              <span>STATUS: Concept</span>
+            </div>
+
             <p>
-              A UAV application study focused on drone-based medical supply delivery
-              for non-agricultural use cases.
+              A swarm drone system concept for following, mapping, and
+              surveillance.
             </p>
-            <div class="tag-row">
+
+            <div class="mini-tags">
               <span>UAV</span>
-              <span>Drones</span>
-              <span>Logistics</span>
-              <span>Research</span>
-            </div>
-            <div class="card-actions">
-              <a href="#" class="mini-btn">Report</a>
-              <a href="#" class="mini-btn">Details</a>
-            </div>
-          </article>
-
-          <article class="project-card project-wide reveal delay-2 tilt-card">
-            <div class="project-media image-fallback" style="--image: url('assets/images/project-swarm.jpg');"></div>
-            <div class="mission-label">RB-M05 / MISSION 05</div>
-            <h2>Swarm Drone System</h2>
-            <p>
-              A concept for a multi-drone system capable of switching between
-              master-drone following and person-following modes, with possible
-              applications in mapping, surveillance, and defense-oriented scenarios.
-            </p>
-            <div class="tag-row">
-              <span>Swarm Robotics</span>
-              <span>Drones</span>
+              <span>Swarm</span>
               <span>Mapping</span>
-              <span>Autonomy</span>
             </div>
-            <div class="card-actions">
-              <a href="#" class="mini-btn">GitHub</a>
-              <a href="#" class="mini-btn">Concept</a>
-            </div>
-          </article>
+          </div>
+        </article>
 
-          <article class="project-card reveal delay-3 tilt-card">
-            <div class="project-media image-fallback" style="--image: url('assets/images/project-crisisgraph.jpg');"></div>
-            <div class="mission-label">RB-M06 / MISSION 06</div>
-            <h2>CrisisGraph AI</h2>
-            <p>
-              A multimodal AI system concept for anticipating and detecting cascading
-              global risks across climate, conflict, health, and economic domains.
-            </p>
-            <div class="tag-row">
-              <span>AI</span>
-              <span>Risk Systems</span>
-              <span>Data</span>
-            </div>
-            <div class="card-actions">
-              <a href="#" class="mini-btn">GitHub</a>
-              <a href="#" class="mini-btn">Details</a>
-            </div>
-          </article>
+        <!-- Project 6 -->
+        <article
+          class="project-card mission-file reveal"
+          data-filter-item="uav"
+          data-popup
+          data-title="Medical Supply Delivery UAV"
+          data-category="UAV / Medical Logistics"
+          data-status="Application Study"
+          data-tools="UAV, Medical Delivery, Logistics"
+          data-description="A UAV application study focused on medical supply delivery using drones in non-agricultural scenarios."
+          data-image="assets/images/project-uav.jpg"
+          data-tags="UAV, Medical Delivery, Logistics"
+        >
+          <div class="project-image scan-image">
+            <img
+              src="assets/images/project-uav.jpg"
+              alt="Medical Supply Delivery UAV project"
+              loading="lazy"
+            />
+          </div>
 
-          <article class="project-card reveal delay-1 tilt-card">
-            <div class="project-media image-fallback"></div>
-            <div class="mission-label">RB-M07 / MISSION 07</div>
-            <h2>Portfolio Website</h2>
+          <div class="project-content">
+            <p class="mission-code">RB-M06 / MISSION FILE</p>
+
+            <h3>Medical Supply Delivery UAV</h3>
+
+            <div class="meta-grid">
+              <span>DOMAIN: UAV</span>
+              <span>STATUS: Study</span>
+            </div>
+
             <p>
-              A static multi-page portfolio built with HTML, CSS, and JavaScript,
-              designed for GitHub Pages with a futuristic robotics interface.
+              A UAV application study focused on medical supply delivery using
+              drones.
             </p>
-            <div class="tag-row">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>GitHub Pages</span>
+
+            <div class="mini-tags">
+              <span>UAV</span>
+              <span>Medical Delivery</span>
+              <span>Logistics</span>
             </div>
-            <div class="card-actions">
-              <a href="#" class="mini-btn">GitHub</a>
-              <a href="#" class="mini-btn">Live</a>
+          </div>
+        </article>
+
+        <!-- Project 7 -->
+        <article
+          class="project-card mission-file reveal"
+          data-filter-item="robotics simulation"
+          data-popup
+          data-title="ROS 2 Hexapod Simulation"
+          data-category="ROS 2 / Gazebo / Robotics"
+          data-status="Simulation Setup"
+          data-tools="ROS 2 Jazzy, Gazebo Harmonic, ros2_control"
+          data-description="A simulation setup for testing Arduino-controlled hexapod movement using ROS 2 Jazzy, Gazebo Harmonic, and ros2_control."
+          data-image="assets/images/project-ros-hexapod.jpg"
+          data-tags="ROS 2, Gazebo, Hexapod, Simulation"
+        >
+          <div class="project-image scan-image">
+            <img
+              src="assets/images/project-ros-hexapod.jpg"
+              alt="ROS 2 Hexapod Simulation project"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="project-content">
+            <p class="mission-code">RB-M07 / MISSION FILE</p>
+
+            <h3>ROS 2 Hexapod Simulation</h3>
+
+            <div class="meta-grid">
+              <span>DOMAIN: ROS 2</span>
+              <span>STATUS: Simulation</span>
             </div>
-          </article>
+
+            <p>
+              A simulation setup for testing Arduino-controlled hexapod movement
+              using ROS 2 and Gazebo.
+            </p>
+
+            <div class="mini-tags">
+              <span>ROS 2</span>
+              <span>Gazebo</span>
+              <span>Hexapod</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container contact-preview-card glass-card reveal">
+        <div>
+          <p class="eyebrow">PROJECT PIPELINE</p>
+
+          <h2>More builds are always in progress.</h2>
+
+          <p>
+            This archive will continue expanding with robotics builds, CAD
+            systems, simulations, and engineering experiments.
+          </p>
         </div>
+
+        <a href="cad-gallery.html" class="btn btn-primary">View CAD Gallery</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Rithik Bala.</p>
-      <p class="footer-command">&gt; missions.loaded: 07</p>
+  <!-- POPUP MODAL -->
+  <div class="popup-modal" aria-hidden="true">
+    <div class="popup-backdrop"></div>
+
+    <div class="popup-card">
+      <button class="popup-close" aria-label="Close popup">×</button>
+
+      <div class="popup-image">
+        <img src="" alt="" />
+      </div>
+
+      <div class="popup-content">
+        <span class="popup-category"></span>
+
+        <h2 class="popup-title"></h2>
+
+        <p class="popup-description"></p>
+
+        <div class="popup-meta"></div>
+
+        <div class="popup-tags"></div>
+
+        <a href="#" class="btn btn-primary popup-link" target="_blank">
+          Open Link
+        </a>
+      </div>
     </div>
-  </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
