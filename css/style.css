@@ -939,7 +939,7 @@ body.light-mode .hero-video-overlay {
   width: fit-content;
   font-size: clamp(4.4rem, 13vw, 12rem);
   line-height: 0.78;
-  letter-spacing: -0.11em;
+  letter-spacing: -0.35em;
   font-weight: 950;
   text-transform: uppercase;
 }
