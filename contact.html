@@ -1,121 +1,210 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Contact | Rithik Bala</title>
-  <meta name="description" content="Contact Rithik Bala for robotics, automation, CAD, embedded systems, and engineering collaborations." />
+  <title>Contact | RITHIK BALA</title>
+
+  <meta
+    name="description"
+    content="Contact RITHIK BALA for robotics, CAD, embedded systems, automation, internship, collaboration, and technical opportunities."
+  />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <div class="cursor-glow"></div>
-  <div class="noise-layer"></div>
-  <div class="scanline-layer"></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
 
-  <header class="site-header" id="siteHeader">
-    <nav class="navbar container">
-      <a href="index.html" class="logo"><span>RB</span></a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-      </button>
+  <!-- GLOBAL EFFECTS -->
+  <div class="scroll-progress">
+    <span id="scrollProgressBar"></span>
+  </div>
 
-      <div class="nav-menu" id="navMenu">
+  <div class="cursor-halo"></div>
+  <div class="cursor-dot"></div>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- HEADER -->
+  <header class="site-header">
+  <nav class="navbar container">
+    <a href="index.html" class="brand" aria-label="RITHIK BALA Home">
+      <span class="brand-glow"></span>
+      <span class="brand-mark">RB</span>
+    </a>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-panel" id="navPanel">
+      <div class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
         <a href="cad-gallery.html" class="nav-link">CAD Gallery</a>
+        <a href="freelance.html" class="nav-link">Freelance</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link active">Contact</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
-          <span class="theme-icon">◐</span>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </div>
+
+      <div class="nav-tools">
+        <div class="system-clock" id="systemClock">SYS 00:00:00</div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span></span>
         </button>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <main>
-    <section class="page-hero">
-      <div class="grid-overlay"></div>
-      <div class="container page-hero-inner reveal">
-        <p class="eyebrow">
-          <span class="pulse-dot"></span>
-          CONTACT CHANNEL
-        </p>
-        <h1>Let’s build something robotic.</h1>
-        <p>
-          Open to internships, collaborations, robotics projects, embedded systems,
-          CAD design, and automation-focused opportunities.
-        </p>
-      </div>
-    </section>
-
-    <section class="section contact-section">
+    <!-- CONTACT HERO -->
+    <section class="contact-section section page-top">
       <div class="container contact-grid">
-        <div class="contact-panel reveal">
-          <p class="section-kicker">DIRECT</p>
-          <h2>Reach out</h2>
-          <p>
-            For project discussions, collaborations, internships, or technical
-            opportunities, you can contact me through email or my social profiles.
+        <div class="contact-main glass-card reveal">
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            DIRECT
           </p>
 
-          <a href="mailto:rithikbala047@gmail.com" class="email-link">
-            rithikbala047@gmail.com
-          </a>
+          <h1>Reach out</h1>
 
-          <div class="location-pill">Location: India</div>
+          <p>
+            For project discussions, collaborations, internships, or technical
+            opportunities, you can contact me through email or my social
+            profiles.
+          </p>
+
+          <div class="contact-info">
+            <div>
+              <strong>Email</strong>
+              <a href="mailto:rithikbala047@gmail.com">
+                rithikbala047@gmail.com
+              </a>
+            </div>
+
+            <div>
+              <strong>Location</strong>
+              <span>India</span>
+            </div>
+          </div>
+
+          <div class="contact-action-row">
+            <a href="mailto:rithikbala047@gmail.com" class="btn btn-primary">
+              Send Email
+            </a>
+
+            <a href="assets/files/resume.pdf" target="_blank" class="btn btn-secondary">
+              Download Resume
+            </a>
+          </div>
         </div>
 
-        <div class="social-panel reveal delay-1">
-          <a href="#" class="social-card">
+        <div class="contact-links glass-card reveal">
+          <div class="contact-link-heading">
+            <p class="eyebrow">SOCIAL CHANNELS</p>
+            <h2>Connect</h2>
+          </div>
+
+          <a href="https://github.com/your-username" target="_blank">
             <span>GitHub</span>
-            <small>github.com/your-username</small>
+            <strong>github.com/your-username ↗</strong>
           </a>
 
-          <a href="#" class="social-card">
+          <a href="https://linkedin.com/in/your-profile" target="_blank">
             <span>LinkedIn</span>
-            <small>linkedin.com/in/your-profile</small>
+            <strong>linkedin.com/in/your-profile ↗</strong>
           </a>
 
-          <a href="#" class="social-card">
+          <a href="https://instagram.com/your-profile" target="_blank">
             <span>Instagram</span>
-            <small>instagram.com/your-profile</small>
+            <strong>instagram.com/your-profile ↗</strong>
           </a>
 
-          <a href="#" class="social-card">
+          <a href="https://youtube.com/@your-channel" target="_blank">
             <span>YouTube</span>
-            <small>youtube.com/@your-channel</small>
+            <strong>youtube.com/@your-channel ↗</strong>
           </a>
         </div>
       </div>
     </section>
 
+    <!-- COLLABORATION TYPES -->
     <section class="section">
       <div class="container">
-        <div class="cta-box reveal">
-          <p class="section-kicker">RESUME</p>
-          <h2>Want the compact version?</h2>
-          <p>Download my resume and explore my projects from the portfolio archive.</p>
-          <div class="hero-actions center-actions">
-            <a href="assets/resume/Rithik_Bala_Resume.pdf" target="_blank" class="btn btn-primary">Download Resume</a>
-            <a href="projects.html" class="btn btn-secondary">View Projects</a>
+        <div class="section-top reveal">
+          <div>
+            <p class="eyebrow">01 / OPEN CHANNELS</p>
+            <h2>Available for</h2>
           </div>
         </div>
+
+        <div class="stack-module-grid">
+          <article class="stack-module glass-card reveal">
+            <p>CHANNEL-01</p>
+            <h3>Internships</h3>
+            <span>
+              Remote or technical internship opportunities related to robotics,
+              embedded systems, automation, CAD, or simulation.
+            </span>
+          </article>
+
+          <article class="stack-module glass-card reveal">
+            <p>CHANNEL-02</p>
+            <h3>Collaborations</h3>
+            <span>
+              Robotics builds, CAD projects, student teams, technical demos,
+              and engineering content collaborations.
+            </span>
+          </article>
+
+          <article class="stack-module glass-card reveal">
+            <p>CHANNEL-03</p>
+            <h3>Project Discussions</h3>
+            <span>
+              Ideas around hexapods, UAV systems, digital twins, manipulators,
+              automation, and mechatronics projects.
+            </span>
+          </article>
+
+          <article class="stack-module glass-card reveal">
+            <p>CHANNEL-04</p>
+            <h3>Technical Opportunities</h3>
+            <span>
+              Robotics, automation, CAD design, embedded systems, simulation,
+              and engineering portfolio opportunities.
+            </span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section">
+      <div class="container contact-preview-card glass-card reveal">
+        <div>
+          <p class="eyebrow">SIGNAL READY</p>
+
+          <h2>Let’s build something technical and useful.</h2>
+
+          <p>
+            If the opportunity involves robotics, automation, CAD, simulation,
+            or intelligent machines, I would like to hear about it.
+          </p>
+        </div>
+
+        <a href="mailto:rithikbala047@gmail.com" class="btn btn-primary">
+          Start Conversation
+        </a>
       </div>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Rithik Bala.</p>
-      <p class="footer-command">&gt; contact.ready: true</p>
-    </div>
-  </footer>
 
   <script src="js/main.js"></script>
 </body>
