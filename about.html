@@ -1,62 +1,82 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>About | Rithik Bala</title>
+  <title>About | RITHIK BALA</title>
+
   <meta
     name="description"
-    content="About Rithik Bala, a Mechatronics and Automation Engineer focused on robotics, automation, CAD design, embedded systems, simulation, and intelligent machines."
+    content="About RITHIK BALA - Mechatronics and Automation Engineer focused on robotics, CAD, embedded systems, ROS 2, automation and simulation."
   />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <div class="cursor-glow"></div>
-  <div class="noise-layer"></div>
-  <div class="scanline-layer"></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
+  
 
-  <header class="site-header" id="siteHeader">
-    <nav class="navbar container">
-      <a href="index.html" class="logo" aria-label="Rithik Bala home">
-        <span>RB</span>
-      </a>
+  <!-- GLOBAL EFFECTS -->
+  <div class="scroll-progress">
+    <span id="scrollProgressBar"></span>
+  </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-      </button>
+  <div class="cursor-halo"></div>
+  <div class="cursor-dot"></div>
 
-      <div class="nav-menu" id="navMenu">
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- HEADER -->
+  <header class="site-header">
+  <nav class="navbar container">
+    <a href="index.html" class="brand" aria-label="RITHIK BALA Home">
+      <span class="brand-glow"></span>
+      <span class="brand-mark">RB</span>
+    </a>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-panel" id="navPanel">
+      <div class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
         <a href="cad-gallery.html" class="nav-link">CAD Gallery</a>
-        <a href="about.html" class="nav-link active">About</a>
+        <a href="freelance.html" class="nav-link">Freelance</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
+      </div>
 
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
-          <span class="theme-icon">◐</span>
+      <div class="nav-tools">
+        <div class="system-clock" id="systemClock">SYS 00:00:00</div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span></span>
         </button>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <main>
     <!-- ABOUT HERO -->
-    <section class="about-hero page-hero">
-      <div class="grid-overlay"></div>
-
-      <div class="container about-hero-grid">
-        <div class="about-hero-content reveal">
+    <section class="about-hero section page-top">
+      <div class="container about-grid">
+        <div class="about-copy reveal">
           <p class="eyebrow">
-            <span class="pulse-dot"></span>
+            <span class="status-dot"></span>
             ENGINEERING PROFILE
           </p>
 
-          <h1>RITHIK BALA</h1>
+          <h1>
+            RITHIK<br />
+            BALA
+          </h1>
 
           <h2>Mechatronics and Automation Engineer</h2>
 
@@ -67,190 +87,280 @@
             mechanisms to robots, digital twins, and intelligent machines.
           </p>
 
-          <div class="about-command-box">
-            <p><span>&gt;</span> profile.role = "Mechatronics and Automation Engineer"</p>
-            <p><span>&gt;</span> focus.stack = ["Robotics", "CAD", "Embedded", "ROS 2"]</p>
-            <p><span>&gt;</span> mission = "Design. Simulate. Build. Improve."</p>
-          </div>
+          <div class="terminal-box glass-card">
+<pre>&gt; profile.role = "Mechatronics and Automation Engineer"
 
-          <div class="about-stats">
-            <div>
-              <span>07+</span>
-              <p>Projects</p>
-            </div>
+&gt; focus.stack = ["Robotics", "CAD", "Embedded", "ROS 2"]
 
-            <div>
-              <span>06+</span>
-              <p>CAD Models</p>
-            </div>
-
-            <div>
-              <span>05+</span>
-              <p>Core Domains</p>
-            </div>
-
-            <div>
-              <span>∞</span>
-              <p>Learning</p>
-            </div>
+&gt; mission = "Design. Simulate. Build. Improve."</pre>
           </div>
         </div>
 
-        <div class="profile-visual reveal delay-1">
-          <div class="profile-orbit orbit-a"></div>
-          <div class="profile-orbit orbit-b"></div>
-          <div class="profile-orbit orbit-c"></div>
-
-          <div class="profile-tags tag-a">ROBOTICS</div>
-          <div class="profile-tags tag-b">CAD</div>
-          <div class="profile-tags tag-c">ROS 2</div>
-          <div class="profile-tags tag-d">EMBEDDED</div>
+        <div class="about-visual reveal">
+          <div class="profile-glow"></div>
+          <div class="profile-orbit orbit-1"></div>
+          <div class="profile-orbit orbit-2"></div>
+          <div class="profile-orbit orbit-3"></div>
 
           <div class="profile-image-wrap">
             <img
               src="assets/images/rithik-profile.png"
-              alt="Rithik Bala profile picture"
+              alt="RITHIK BALA profile image"
+              loading="lazy"
             />
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ENGINEERING IDENTITY -->
-    <section class="section identity-section">
+    <!-- CURRENT FOCUS -->
+    <section class="section">
       <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="section-kicker">01 / ENGINEERING IDENTITY</p>
-          <h2>What I am building toward.</h2>
-          <p>
-            My goal is to become an engineer who can design complete robotic
-            systems mechanically, electronically, and computationally.
-          </p>
+        <div class="section-top reveal">
+          <div>
+            <p class="eyebrow">01 / CURRENT BUILD FOCUS</p>
+            <h2>Active engineering direction</h2>
+          </div>
         </div>
 
-        <div class="identity-grid">
-          <article class="identity-card reveal">
-            <span>01</span>
-            <h3>Design Thinking</h3>
+        <div class="focus-grid">
+          <article class="focus-card glass-card reveal">
+            <p class="mission-code">FOCUS-01</p>
+
+            <h3>Hexapod Robot</h3>
+
             <p>
-              I enjoy breaking down complex systems into mechanisms, modules,
-              constraints, and clean engineering decisions.
+              Building and refining a 6-legged robot with servo coordination,
+              tripod gait control, and embedded motion logic.
             </p>
+
+            <div class="mini-tags">
+              <span>Arduino</span>
+              <span>PCA9685</span>
+              <span>MG995</span>
+            </div>
           </article>
 
-          <article class="identity-card reveal delay-1">
-            <span>02</span>
-            <h3>Build Mindset</h3>
+          <article class="focus-card glass-card reveal">
+            <p class="mission-code">FOCUS-02</p>
+
+            <h3>ROS 2 Simulation</h3>
+
             <p>
-              I prefer practical learning through projects, prototypes,
-              simulations, CAD models, and working hardware.
+              Learning ROS 2 Jazzy, Gazebo Harmonic, ros2_control, and
+              simulation-first robotics workflows.
             </p>
+
+            <div class="mini-tags">
+              <span>ROS 2</span>
+              <span>Gazebo</span>
+              <span>Simulation</span>
+            </div>
           </article>
 
-          <article class="identity-card reveal delay-2">
-            <span>03</span>
-            <h3>Robotics Direction</h3>
+          <article class="focus-card glass-card reveal">
+            <p class="mission-code">FOCUS-03</p>
+
+            <h3>Delta Manipulator Digital Twin</h3>
+
             <p>
-              My long-term focus is robotics, automation, embedded control,
-              simulation, digital twins, and intelligent machines.
+              Developing CAD-to-simulation thinking for parallel robot systems
+              and mechanism validation.
             </p>
+
+            <div class="mini-tags">
+              <span>CAD</span>
+              <span>Digital Twin</span>
+              <span>Motion Study</span>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
     <!-- CERTIFICATES -->
-    <section class="section certificates-section">
+    <section class="certificates-section section">
       <div class="container">
-        <div class="section-heading split-heading reveal">
+        <div class="section-top reveal">
           <div>
-            <p class="section-kicker">02 / CERTIFICATES</p>
-            <h2>Proof of learning.</h2>
+            <p class="eyebrow">02 / VERIFIED MODULES</p>
+            <h2>Certificates</h2>
           </div>
-
-          
         </div>
 
-        <div class="certificate-marquee reveal delay-1">
+        <div class="certificate-marquee reveal">
           <div class="certificate-track">
-            <article class="certificate-card">
-              <img src="assets/images/cert-nptel.png" alt="NPTEL Certificate" />
-              <div>
-                <h3>NPTEL Certification</h3>
-                <p>Robotics / Engineering Learning</p>
-              </div>
-            </article>
+            <!-- Certificate 1 -->
+            <article
+              class="certificate-card glass-card"
+              data-popup
+              data-title="Google AI Essentials"
+              data-category="Certificate / AI"
+              data-status="Verified Learning Module"
+              data-tools="AI Fundamentals, Productivity, Responsible AI"
+              data-description="A certificate focused on AI essentials and practical understanding of artificial intelligence tools."
+              data-image="assets/images/cert-google-ai.png"
+              data-tags="AI, Google, Certificate"
+            >
+              <img
+                src="assets/images/cert-google-ai.png"
+                alt="Google AI Essentials certificate"
+                loading="lazy"
+              />
 
-            <article class="certificate-card">
-              <img src="assets/images/cert-google-ai.png" alt="Google AI Essentials Certificate" />
               <div>
+                <p class="mission-code">CERT-01</p>
                 <h3>Google AI Essentials</h3>
-                <p>Artificial Intelligence</p>
+                <span>AI / Learning Module</span>
               </div>
             </article>
 
-            <article class="certificate-card">
-              <img src="assets/images/cert-ibm-ai.png" alt="IBM AI Engineering Certificate" />
+            <!-- Certificate 2 -->
+            <article
+              class="certificate-card glass-card"
+              data-popup
+              data-title="IBM AI / AI Fundamentals"
+              data-category="Certificate / AI"
+              data-status="Verified Learning Module"
+              data-tools="AI Fundamentals, Data, Machine Learning Concepts"
+              data-description="A certificate related to AI fundamentals and introductory artificial intelligence concepts."
+              data-image="assets/images/cert-ibm-ai.png"
+              data-tags="AI, IBM, Certificate"
+            >
+              <img
+                src="assets/images/cert-ibm-ai.png"
+                alt="IBM AI certificate"
+                loading="lazy"
+              />
+
               <div>
-                <h3>IBM AI Engineering</h3>
-                <p>AI and Technical Systems</p>
+                <p class="mission-code">CERT-02</p>
+                <h3>IBM AI / AI Fundamentals</h3>
+                <span>AI / Learning Module</span>
               </div>
             </article>
 
-            <article class="certificate-card">
-              <img src="assets/images/cert-tnds.png" alt="TNDS Certificate" />
+            <!-- Certificate 3 -->
+            <article
+              class="certificate-card glass-card"
+              data-popup
+              data-title="MATLAB Certification"
+              data-category="Certificate / Technical Tools"
+              data-status="Verified Learning Module"
+              data-tools="MATLAB, Engineering Computation, Simulation"
+              data-description="A certificate related to MATLAB and engineering computation workflows."
+              data-image="assets/images/cert-matlab.png"
+              data-tags="MATLAB, Engineering, Certificate"
+            >
+              <img
+                src="assets/images/cert-matlab.png"
+                alt="MATLAB certificate"
+                loading="lazy"
+              />
+
               <div>
-                <h3>TNDS Certification</h3>
-                <p>Drone Technology</p>
+                <p class="mission-code">CERT-03</p>
+                <h3>MATLAB Certification</h3>
+                <span>Technical Tools</span>
               </div>
             </article>
 
-            <article class="certificate-card">
-              <img src="assets/images/cert-matlab.png" alt="MATLAB Onramp Certificate" />
-              <div>
-                <h3>MATLAB Onramp</h3>
-                <p>MathWorks</p>
-              </div>
-            </article>
+            <!-- Certificate 4 -->
+            <article
+              class="certificate-card glass-card"
+              data-popup
+              data-title="NPTEL Certification"
+              data-category="Certificate / Technical Learning"
+              data-status="Verified Learning Module"
+              data-tools="Engineering Concepts, Technical Learning"
+              data-description="A technical learning certificate from NPTEL."
+              data-image="assets/images/cert-nptel.png"
+              data-tags="NPTEL, Engineering, Certificate"
+            >
+              <img
+                src="assets/images/cert-nptel.png"
+                alt="NPTEL certificate"
+                loading="lazy"
+              />
 
-            <!-- Duplicate set for seamless infinite movement -->
-            <article class="certificate-card">
-              <img src="assets/images/cert-nptel.png" alt="NPTEL Certificate" />
               <div>
+                <p class="mission-code">CERT-04</p>
                 <h3>NPTEL Certification</h3>
-                <p>Robotics / Engineering Learning</p>
+                <span>Technical Learning</span>
               </div>
             </article>
 
-            <article class="certificate-card">
-              <img src="assets/images/cert-google-ai.png" alt="Google AI Essentials Certificate" />
+            <!-- Certificate 5 -->
+            <article
+              class="certificate-card glass-card"
+              data-popup
+              data-title="TNDS / Technical Certificate"
+              data-category="Certificate / Technical"
+              data-status="Verified Learning Module"
+              data-tools="Technical Skills, Engineering Exposure"
+              data-description="A technical certificate related to engineering learning and skill development."
+              data-image="assets/images/cert-tnds.png"
+              data-tags="Technical, Certificate"
+            >
+              <img
+                src="assets/images/cert-tnds.png"
+                alt="TNDS technical certificate"
+                loading="lazy"
+              />
+
               <div>
+                <p class="mission-code">CERT-05</p>
+                <h3>TNDS / Technical Certificate</h3>
+                <span>Technical Certificate</span>
+              </div>
+            </article>
+
+            <!-- Duplicate set for seamless auto-scroll -->
+            <article
+              class="certificate-card glass-card"
+              data-popup
+              data-title="Google AI Essentials"
+              data-category="Certificate / AI"
+              data-status="Verified Learning Module"
+              data-tools="AI Fundamentals, Productivity, Responsible AI"
+              data-description="A certificate focused on AI essentials and practical understanding of artificial intelligence tools."
+              data-image="assets/images/cert-google-ai.png"
+              data-tags="AI, Google, Certificate"
+            >
+              <img
+                src="assets/images/cert-google-ai.png"
+                alt="Google AI Essentials certificate"
+                loading="lazy"
+              />
+
+              <div>
+                <p class="mission-code">CERT-01</p>
                 <h3>Google AI Essentials</h3>
-                <p>Artificial Intelligence</p>
+                <span>AI / Learning Module</span>
               </div>
             </article>
 
-            <article class="certificate-card">
-              <img src="assets/images/cert-ibm-ai.png" alt="IBM AI Engineering Certificate" />
-              <div>
-                <h3>IBM AI Engineering</h3>
-                <p>AI and Technical Systems</p>
-              </div>
-            </article>
+            <article
+              class="certificate-card glass-card"
+              data-popup
+              data-title="IBM AI / AI Fundamentals"
+              data-category="Certificate / AI"
+              data-status="Verified Learning Module"
+              data-tools="AI Fundamentals, Data, Machine Learning Concepts"
+              data-description="A certificate related to AI fundamentals and introductory artificial intelligence concepts."
+              data-image="assets/images/cert-ibm-ai.png"
+              data-tags="AI, IBM, Certificate"
+            >
+              <img
+                src="assets/images/cert-ibm-ai.png"
+                alt="IBM AI certificate"
+                loading="lazy"
+              />
 
-            <article class="certificate-card">
-              <img src="assets/images/cert-tnds.png" alt="TNDS Certificate" />
               <div>
-                <h3>TNDS Certification</h3>
-                <p>Drone Technology</p>
-              </div>
-            </article>
-
-            <article class="certificate-card">
-              <img src="assets/images/cert-matlab.png" alt="MATLAB Onramp Certificate" />
-              <div>
-                <h3>MATLAB Onramp</h3>
-                <p>MathWorks</p>
+                <p class="mission-code">CERT-02</p>
+                <h3>IBM AI / AI Fundamentals</h3>
+                <span>AI / Learning Module</span>
               </div>
             </article>
           </div>
@@ -259,261 +369,162 @@
     </section>
 
     <!-- SKILLS -->
-    <section class="section about-skills-section">
+    <section class="skills-section section">
       <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="section-kicker">03 / SKILLS</p>
-          <h2>Technical modules.</h2>
-          <p>
-            A practical skill stack across mechanical systems, electronics,
-            software, robotics, simulation, and engineering tools.
-          </p>
-        </div>
-
-        <div class="about-skill-grid">
-          <article class="about-skill-card reveal">
-            <div class="skill-icon">⬡</div>
-            <span class="skill-label">Mechanical</span>
-            <h3>CAD Design</h3>
-            <p>
-              Mechanical parts, robotic structures, manipulators, brackets,
-              assemblies, and concept modeling.
-            </p>
-            <div class="skill-meter"><span style="width: 92%"></span></div>
-          </article>
-
-          <article class="about-skill-card reveal delay-1">
-            <div class="skill-icon">⚙</div>
-            <span class="skill-label">Mechanical</span>
-            <h3>Mechanisms</h3>
-            <p>
-              Linkages, joints, motion transfer, kinematic concepts, robot
-              frames, and mechanical system layouts.
-            </p>
-            <div class="skill-meter"><span style="width: 86%"></span></div>
-          </article>
-
-          <article class="about-skill-card reveal delay-2">
-            <div class="skill-icon">⌁</div>
-            <span class="skill-label">Electronics</span>
-            <h3>Embedded Control</h3>
-            <p>
-              Arduino, servo control, motor drivers, sensors, PWM systems,
-              wiring logic, and hardware testing.
-            </p>
-            <div class="skill-meter"><span style="width: 82%"></span></div>
-          </article>
-
-          <article class="about-skill-card reveal delay-3">
-            <div class="skill-icon">&lt;/&gt;</div>
-            <span class="skill-label">Software</span>
-            <h3>Programming</h3>
-            <p>
-              Python, C/C++, JavaScript, logic building, debugging, automation
-              scripts, and technical documentation.
-            </p>
-            <div class="skill-meter"><span style="width: 78%"></span></div>
-          </article>
-
-          <article class="about-skill-card reveal">
-            <div class="skill-icon">◎</div>
-            <span class="skill-label">Robotics</span>
-            <h3>ROS 2 & Simulation</h3>
-            <p>
-              Robot simulation, Gazebo workflows, digital twins, URDF concepts,
-              robot motion testing, and system integration.
-            </p>
-            <div class="skill-meter"><span style="width: 72%"></span></div>
-          </article>
-
-          <article class="about-skill-card reveal delay-1">
-            <div class="skill-icon">▣</div>
-            <span class="skill-label">Tools</span>
-            <h3>Engineering Tools</h3>
-            <p>
-              GitHub, CAD tools, simulation software, VS Code, project
-              documentation, and structured engineering workflows.
-            </p>
-            <div class="skill-meter"><span style="width: 84%"></span></div>
-          </article>
-
-          <article class="about-skill-card reveal delay-2">
-            <div class="skill-icon">◇</div>
-            <span class="skill-label">Automation</span>
-            <h3>Control Systems</h3>
-            <p>
-              Automation logic, feedback thinking, system response, actuator
-              control, and practical control concepts.
-            </p>
-            <div class="skill-meter"><span style="width: 76%"></span></div>
-          </article>
-
-          <article class="about-skill-card reveal delay-3">
-            <div class="skill-icon">✦</div>
-            <span class="skill-label">Design</span>
-            <h3>UI / Portfolio Design</h3>
-            <p>
-              Building clean web interfaces, visual layouts, responsive pages,
-              project presentation, and interactive portfolios.
-            </p>
-            <div class="skill-meter"><span style="width: 74%"></span></div>
-          </article>
-
-          <article class="about-skill-card reveal">
-            <div class="skill-icon">⟁</div>
-            <span class="skill-label">Research</span>
-            <h3>System Thinking</h3>
-            <p>
-              Understanding technical problems, comparing approaches, planning
-              projects, and connecting ideas across domains.
-            </p>
-            <div class="skill-meter"><span style="width: 80%"></span></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CURRENT FOCUS -->
-    <section class="section focus-section">
-      <div class="container">
-        <div class="section-heading split-heading reveal">
+        <div class="section-top reveal">
           <div>
-            <p class="section-kicker">04 / CURRENT FOCUS</p>
-            <h2>What I am improving now.</h2>
+            <p class="eyebrow">03 / SKILL MODULES</p>
+            <h2>Technical stack</h2>
           </div>
-
-          <p class="section-side-note">
-            These are the areas I am actively building toward through projects,
-            simulations, and hands-on learning.
-          </p>
         </div>
 
-        <div class="focus-grid">
-          <article class="focus-card reveal">
-            <div class="focus-number">01</div>
-            <h3>ROS 2 Robotics</h3>
-            <p>
-              Learning robot simulation, Gazebo workflows, URDF structure,
-              controllers, and digital twin development.
-            </p>
+        <div class="skills-grid">
+          <!-- Robotics & Simulation -->
+          <article class="skill-group glass-card reveal">
+            <p class="mission-code">MOD-01</p>
+
+            <h3>Robotics & Simulation</h3>
+
+            <div class="skill-chip-grid">
+              <span>ROS 2</span>
+              <span>Gazebo</span>
+              <span>Robot Kinematics</span>
+              <span>Gait Logic</span>
+              <span>Digital Twins</span>
+              <span>UAV Systems</span>
+              <span>Swarm Robotics</span>
+            </div>
           </article>
 
-          <article class="focus-card reveal delay-1">
-            <div class="focus-number">02</div>
-            <h3>Embedded Motion</h3>
-            <p>
-              Improving servo control, sensor integration, actuator behavior,
-              and real hardware testing.
-            </p>
+          <!-- CAD & Mechanical Design -->
+          <article class="skill-group glass-card reveal">
+            <p class="mission-code">MOD-02</p>
+
+            <h3>CAD & Mechanical Design</h3>
+
+            <div class="skill-chip-grid">
+              <span>SolidWorks</span>
+              <span>Fusion 360</span>
+              <span>Mechanical Assemblies</span>
+              <span>Mechanism Design</span>
+              <span>Design for Manufacturing</span>
+              <span>CAD Modelling</span>
+            </div>
           </article>
 
-          <article class="focus-card reveal delay-2">
-            <div class="focus-number">03</div>
-            <h3>Advanced CAD</h3>
-            <p>
-              Designing cleaner mechanical systems, robot frames, manipulators,
-              and assembly-ready models.
-            </p>
+          <!-- Embedded Systems -->
+          <article class="skill-group glass-card reveal">
+            <p class="mission-code">MOD-03</p>
+
+            <h3>Embedded Systems</h3>
+
+            <div class="skill-chip-grid">
+              <span>Arduino</span>
+              <span>ESP32</span>
+              <span>Sensors</span>
+              <span>Actuators</span>
+              <span>Servo Control</span>
+              <span>PCA9685</span>
+              <span>Microcontrollers</span>
+            </div>
           </article>
 
-          <article class="focus-card reveal delay-3">
-            <div class="focus-number">04</div>
-            <h3>Project Presentation</h3>
-            <p>
-              Documenting engineering projects professionally with visuals,
-              videos, GitHub repositories, and portfolio case studies.
-            </p>
+          <!-- Software & Tools -->
+          <article class="skill-group glass-card reveal">
+            <p class="mission-code">MOD-04</p>
+
+            <h3>Software & Tools</h3>
+
+            <div class="skill-chip-grid">
+              <span>Python</span>
+              <span>C/C++</span>
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>GitHub</span>
+              <span>VS Code</span>
+              <span>Ubuntu</span>
+            </div>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- TIMELINE -->
-    <section class="section timeline-section">
-      <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="section-kicker">05 / BUILD PATH</p>
-          <h2>Engineering direction.</h2>
-          <p>
-            A simple roadmap of how my skills connect into complete robotic
-            systems.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <div class="timeline-item reveal">
-            <span class="timeline-dot"></span>
-            <div>
-              <h3>Mechanical Design Foundation</h3>
-              <p>
-                CAD modeling, mechanism design, robotic structures, assemblies,
-                and physical system thinking.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal delay-1">
-            <span class="timeline-dot"></span>
-            <div>
-              <h3>Embedded Robotics</h3>
-              <p>
-                Arduino, servo control, sensors, drivers, and hardware-level
-                motion control.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal delay-2">
-            <span class="timeline-dot"></span>
-            <div>
-              <h3>Simulation and Digital Twins</h3>
-              <p>
-                Testing robot behavior virtually using ROS 2, Gazebo, and
-                simulation-first development.
-              </p>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal delay-3">
-            <span class="timeline-dot"></span>
-            <div>
-              <h3>Advanced Robotics Systems</h3>
-              <p>
-                Exploring manipulators, hexapods, UAV systems, swarm robotics,
-                automation, and intelligent machines.
-              </p>
-            </div>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="section about-cta-section">
+    <!-- BUILD LOG -->
+    <section class="build-log-section section">
       <div class="container">
-        <div class="about-cta-card reveal">
-          <p class="section-kicker">06 / NEXT</p>
-          <h2>Engineering ideas into working systems.</h2>
-          <p>
-            I am currently building my portfolio around robotics, automation,
-            CAD design, embedded systems, and simulation-based engineering.
-          </p>
+        <div class="section-top reveal">
+          <div>
+            <p class="eyebrow">04 / BUILD LOG</p>
+            <h2>Engineering timeline</h2>
+          </div>
+        </div>
 
-          <div class="cta-actions">
-            <a href="projects.html" class="btn btn-primary">View Projects</a>
-            <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+        <div class="timeline glass-card reveal">
+          <div class="timeline-item">
+            <span>2026</span>
+            <div>
+              <h3>Portfolio Engineering Archive</h3>
+              <p>
+                Building a futuristic static portfolio system for GitHub Pages.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span>2025</span>
+            <div>
+              <h3>Hexapod Robot / Delta Manipulator / UAV Systems</h3>
+              <p>
+                Focused on robotics projects, CAD design, digital twin workflows,
+                and embedded control systems.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <span>2024</span>
+            <div>
+              <h3>CAD and Mechatronics Foundation</h3>
+              <p>
+                Built mechanical design skills, CAD practice, and technical
+                project foundations.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Rithik Bala.</p>
-      <p class="footer-command">&gt; profile.loaded: true</p>
+  <!-- POPUP MODAL -->
+  <div class="popup-modal" aria-hidden="true">
+    <div class="popup-backdrop"></div>
+
+    <div class="popup-card">
+      <button class="popup-close" aria-label="Close popup">×</button>
+
+      <div class="popup-image">
+        <img src="" alt="" />
+      </div>
+
+      <div class="popup-content">
+        <span class="popup-category"></span>
+
+        <h2 class="popup-title"></h2>
+
+        <p class="popup-description"></p>
+
+        <div class="popup-meta"></div>
+
+        <div class="popup-tags"></div>
+
+        <a href="#" class="btn btn-primary popup-link" target="_blank">
+          Open Link
+        </a>
+      </div>
     </div>
-  </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
