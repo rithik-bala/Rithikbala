@@ -1,141 +1,825 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>CAD Gallery | Rithik Bala</title>
-  <meta name="description" content="CAD gallery of robotic mechanisms, manipulators, drone frames, and mechanical design concepts by Rithik Bala." />
+  <title>CAD Gallery | RITHIK BALA</title>
+
+  <meta
+    name="description"
+    content="CAD Gallery by RITHIK BALA featuring mechanical design, assemblies, robot parts, mechanisms, and engineering CAD archive screenshots."
+  />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <div class="cursor-glow"></div>
-  <div class="noise-layer"></div>
-  <div class="scanline-layer"></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
+  
 
-  <header class="site-header" id="siteHeader">
-    <nav class="navbar container">
-      <a href="index.html" class="logo"><span>RB</span></a>
+  <!-- GLOBAL EFFECTS -->
+  <div class="scroll-progress">
+    <span id="scrollProgressBar"></span>
+  </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-      </button>
+  <div class="cursor-halo"></div>
+  <div class="cursor-dot"></div>
 
-      <div class="nav-menu" id="navMenu">
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- HEADER -->
+  <header class="site-header">
+  <nav class="navbar container">
+    <a href="index.html" class="brand" aria-label="RITHIK BALA Home">
+      <span class="brand-glow"></span>
+      <span class="brand-mark">RB</span>
+    </a>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open navigation menu">
+      <span></span>
+      <span></span>
+    </button>
+
+    <div class="nav-panel" id="navPanel">
+      <div class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="cad-gallery.html" class="nav-link active">CAD Gallery</a>
+        <a href="cad-gallery.html" class="nav-link">CAD Gallery</a>
+        <a href="freelance.html" class="nav-link">Freelance</a>
         <a href="about.html" class="nav-link">About</a>
         <a href="contact.html" class="nav-link">Contact</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
-          <span class="theme-icon">◐</span>
+      </div>
+
+      <div class="nav-tools">
+        <div class="system-clock" id="systemClock">SYS 00:00:00</div>
+
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <span></span>
         </button>
       </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
+</header>
 
   <main>
-    <section class="page-hero">
-      <div class="grid-overlay"></div>
-      <div class="container page-hero-inner reveal">
+    <!-- PAGE HERO -->
+    <section class="page-hero section page-top">
+      <div class="container">
         <p class="eyebrow">
-          <span class="pulse-dot"></span>
-          CAD DESIGN ARCHIVE
+          <span class="status-dot"></span>
+          CAD ARCHIVE
         </p>
-        <h1>Mechanical ideas visualized before they move.</h1>
-        <p>
-          A gallery for robotic mechanisms, manipulators, drone frames,
-          structural concepts, and design experiments.
+
+        <h1 class="page-title">CAD Gallery</h1>
+
+        <p class="page-subtitle">
+          A visual engineering archive of CAD screenshots, mechanisms,
+          assemblies, and design iterations.
         </p>
       </div>
     </section>
 
-    <section class="section">
+    <!-- CAD FILTER BAR -->
+    <section class="filter-section">
       <div class="container">
-        <div class="filter-bar reveal">
+        <div class="filter-bar glass-card reveal">
           <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="robots">Robots</button>
-          <button class="filter-btn" data-filter="manipulators">Manipulators</button>
-          <button class="filter-btn" data-filter="drones">Drones</button>
-          <button class="filter-btn" data-filter="mechanisms">Mechanisms</button>
-          <button class="filter-btn" data-filter="concepts">Concepts</button>
+          <button class="filter-btn" data-filter="mechanism">Mechanism</button>
+          <button class="filter-btn" data-filter="assembly">Assembly</button>
+          <button class="filter-btn" data-filter="robotics">Robotics</button>
+          <button class="filter-btn" data-filter="concept">Concept</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAD GALLERY -->
+    <section class="cad-section section">
+      <div class="container cad-grid">
+
+        <!-- CAD 01 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="mechanism assembly"
+          data-popup
+          data-title="CAD Model 01"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Mechanical Design, Assembly"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot (22).png"
+          data-tags="CAD, Mechanical Design, Assembly"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot (22).png" alt="CAD Model 01" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-001 / ARCHIVE FILE</p>
+            <h3>CAD Model 01</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 02 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="mechanism"
+          data-popup
+          data-title="CAD Model 02"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Mechanical Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2024-02-07 135053.png"
+          data-tags="CAD, Mechanism, Mechanical Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2024-02-07 135053.png" alt="CAD Model 02" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-002 / ARCHIVE FILE</p>
+            <h3>CAD Model 02</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 03 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="assembly"
+          data-popup
+          data-title="CAD Model 03"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Assembly"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2024-09-13 132355.png"
+          data-tags="CAD, Assembly"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2024-09-13 132355.png" alt="CAD Model 03" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-003 / ARCHIVE FILE</p>
+            <h3>CAD Model 03</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 04 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics assembly"
+          data-popup
+          data-title="CAD Model 04"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics, Assembly"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2024-09-17 223620.png"
+          data-tags="CAD, Robotics, Assembly"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2024-09-17 223620.png" alt="CAD Model 04" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-004 / ARCHIVE FILE</p>
+            <h3>CAD Model 04</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 05 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="mechanism"
+          data-popup
+          data-title="CAD Model 05"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Mechanical Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-04-02 144808.png"
+          data-tags="CAD, Mechanical Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-04-02 144808.png" alt="CAD Model 05" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-005 / ARCHIVE FILE</p>
+            <h3>CAD Model 05</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 06 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="mechanism"
+          data-popup
+          data-title="CAD Model 06"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Mechanical Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-04-02 150808.png"
+          data-tags="CAD, Mechanical Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-04-02 150808.png" alt="CAD Model 06" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-006 / ARCHIVE FILE</p>
+            <h3>CAD Model 06</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 07 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="mechanism"
+          data-popup
+          data-title="CAD Model 07"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Mechanical Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-04-02 151047.png"
+          data-tags="CAD, Mechanical Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-04-02 151047.png" alt="CAD Model 07" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-007 / ARCHIVE FILE</p>
+            <h3>CAD Model 07</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 08 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="mechanism"
+          data-popup
+          data-title="CAD Model 08"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Mechanical Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-04-02 152244.png"
+          data-tags="CAD, Mechanical Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-04-02 152244.png" alt="CAD Model 08" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-008 / ARCHIVE FILE</p>
+            <h3>CAD Model 08</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 09 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics assembly"
+          data-popup
+          data-title="CAD Model 09"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics, Assembly"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-05-04 222233.png"
+          data-tags="CAD, Robotics, Assembly"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-05-04 222233.png" alt="CAD Model 09" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-009 / ARCHIVE FILE</p>
+            <h3>CAD Model 09</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 10 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="concept"
+          data-popup
+          data-title="CAD Model 10"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Concept Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-08-09 233923.png"
+          data-tags="CAD, Concept Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-08-09 233923.png" alt="CAD Model 10" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-010 / ARCHIVE FILE</p>
+            <h3>CAD Model 10</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 11 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="concept"
+          data-popup
+          data-title="CAD Model 11"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Concept Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-08-09 233935.png"
+          data-tags="CAD, Concept Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-08-09 233935.png" alt="CAD Model 11" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-011 / ARCHIVE FILE</p>
+            <h3>CAD Model 11</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 12 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="concept"
+          data-popup
+          data-title="CAD Model 12"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Concept Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-08-09 234008.png"
+          data-tags="CAD, Concept Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-08-09 234008.png" alt="CAD Model 12" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-012 / ARCHIVE FILE</p>
+            <h3>CAD Model 12</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 13 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="concept"
+          data-popup
+          data-title="CAD Model 13"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Concept Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-08-09 234023.png"
+          data-tags="CAD, Concept Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-08-09 234023.png" alt="CAD Model 13" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-013 / ARCHIVE FILE</p>
+            <h3>CAD Model 13</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 14 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="concept"
+          data-popup
+          data-title="CAD Model 14"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Concept Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-08-09 234042.png"
+          data-tags="CAD, Concept Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-08-09 234042.png" alt="CAD Model 14" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-014 / ARCHIVE FILE</p>
+            <h3>CAD Model 14</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 15 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="concept"
+          data-popup
+          data-title="CAD Model 15"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Concept Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-08-09 234215.png"
+          data-tags="CAD, Concept Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-08-09 234215.png" alt="CAD Model 15" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-015 / ARCHIVE FILE</p>
+            <h3>CAD Model 15</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 16 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="concept"
+          data-popup
+          data-title="CAD Model 16"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Concept Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-08-09 234229.png"
+          data-tags="CAD, Concept Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-08-09 234229.png" alt="CAD Model 16" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-016 / ARCHIVE FILE</p>
+            <h3>CAD Model 16</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 17 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="concept"
+          data-popup
+          data-title="CAD Model 17"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Concept Design"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-08-09 234242.png"
+          data-tags="CAD, Concept Design"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-08-09 234242.png" alt="CAD Model 17" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-017 / ARCHIVE FILE</p>
+            <h3>CAD Model 17</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 18 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="assembly"
+          data-popup
+          data-title="CAD Model 18"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Assembly"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-10-31 085940.png"
+          data-tags="CAD, Assembly"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-10-31 085940.png" alt="CAD Model 18" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-018 / ARCHIVE FILE</p>
+            <h3>CAD Model 18</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 19 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="assembly"
+          data-popup
+          data-title="CAD Model 19"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Assembly"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-10-31 090310.png"
+          data-tags="CAD, Assembly"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-10-31 090310.png" alt="CAD Model 19" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-019 / ARCHIVE FILE</p>
+            <h3>CAD Model 19</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 20 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 20"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2025-11-02 234756.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2025-11-02 234756.png" alt="CAD Model 20" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-020 / ARCHIVE FILE</p>
+            <h3>CAD Model 20</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 21 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 21"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2026-01-29 202941.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2026-01-29 202941.png" alt="CAD Model 21" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-021 / ARCHIVE FILE</p>
+            <h3>CAD Model 21</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 22 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 22"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2026-02-15 224620.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2026-02-15 224620.png" alt="CAD Model 22" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-022 / ARCHIVE FILE</p>
+            <h3>CAD Model 22</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 23 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 23"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2026-03-27 153613.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2026-03-27 153613.png" alt="CAD Model 23" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-023 / ARCHIVE FILE</p>
+            <h3>CAD Model 23</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 24 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 24"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2026-03-28 200512.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2026-03-28 200512.png" alt="CAD Model 24" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-024 / ARCHIVE FILE</p>
+            <h3>CAD Model 24</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 25 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 25"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2026-03-28 205859.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2026-03-28 205859.png" alt="CAD Model 25" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-025 / ARCHIVE FILE</p>
+            <h3>CAD Model 25</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 26 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 26"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2026-04-04 182513.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2026-04-04 182513.png" alt="CAD Model 26" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-026 / ARCHIVE FILE</p>
+            <h3>CAD Model 26</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 27 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 27"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2026-04-04 182727.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2026-04-04 182727.png" alt="CAD Model 27" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-027 / ARCHIVE FILE</p>
+            <h3>CAD Model 27</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+        <!-- CAD 28 -->
+        <article
+          class="cad-card archive-file reveal"
+          data-filter-item="robotics"
+          data-popup
+          data-title="CAD Model 28"
+          data-category="CAD Design"
+          data-status="Archived"
+          data-tools="CAD, Robotics"
+          data-description="Mechanical CAD archive file. You can rename and update this description later."
+          data-image="assets/images/Screenshot 2026-04-10 230436.png"
+          data-tags="CAD, Robotics"
+        >
+          <div class="cad-image scan-image">
+            <img src="assets/images/Screenshot 2026-04-10 230436.png" alt="CAD Model 28" loading="lazy" />
+          </div>
+
+          <div class="cad-content">
+            <p class="mission-code">RB-CAD-028 / ARCHIVE FILE</p>
+            <h3>CAD Model 28</h3>
+            <span class="archive-status">STATUS: Archived</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container contact-preview-card glass-card reveal">
+        <div>
+          <p class="eyebrow">CAD SYSTEM ONLINE</p>
+
+          <h2>Every design iteration adds to the archive.</h2>
+
+          <p>
+            Rename titles, update descriptions, or add new CAD cards directly in
+            this file whenever you create new models.
+          </p>
         </div>
 
-        <div class="cad-grid">
-          <article class="cad-card reveal" data-category="manipulators">
-            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-delta.jpg');"></div>
-            <div class="cad-content">
-              <span class="cad-category">Manipulator</span>
-              <h2>Delta Manipulator CAD</h2>
-              <p>Parallel robotic mechanism designed for compact motion and future digital twin testing.</p>
-              <span class="software-pill">Fusion 360 / SolidWorks</span>
-            </div>
-          </article>
-
-          <article class="cad-card reveal delay-1" data-category="robots">
-            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-hexapod.jpg');"></div>
-            <div class="cad-content">
-              <span class="cad-category">Robot Structure</span>
-              <h2>Hexapod Structure</h2>
-              <p>Six-legged robot body and leg mechanism concept for servo-based walking motion.</p>
-              <span class="software-pill">CAD Model</span>
-            </div>
-          </article>
-
-          <article class="cad-card reveal delay-2" data-category="drones">
-            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-drone.jpg');"></div>
-            <div class="cad-content">
-              <span class="cad-category">Drone</span>
-              <h2>Drone Concept Frame</h2>
-              <p>Conceptual UAV frame layout for drone-based applications and future swarm systems.</p>
-              <span class="software-pill">CAD Concept</span>
-            </div>
-          </article>
-
-          <article class="cad-card reveal delay-1" data-category="mechanisms">
-            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-joint.jpg');"></div>
-            <div class="cad-content">
-              <span class="cad-category">Mechanism</span>
-              <h2>Robotic Joint Concept</h2>
-              <p>Joint and linkage concept for robotic movement studies and mechanical experimentation.</p>
-              <span class="software-pill">Mechanical Design</span>
-            </div>
-          </article>
-
-          <article class="cad-card reveal delay-2" data-category="mechanisms">
-            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-linkage.jpg');"></div>
-            <div class="cad-content">
-              <span class="cad-category">Linkage</span>
-              <h2>Mechanical Linkage</h2>
-              <p>Linkage design study for understanding constrained motion and mechanical transmission.</p>
-              <span class="software-pill">CAD Study</span>
-            </div>
-          </article>
-
-          <article class="cad-card reveal delay-3" data-category="concepts">
-            <div class="cad-image image-fallback" style="--image: url('assets/images/cad-effector.jpg');"></div>
-            <div class="cad-content">
-              <span class="cad-category">Concept</span>
-              <h2>End Effector Concept</h2>
-              <p>Conceptual robotic end effector design for manipulation and future prototyping.</p>
-              <span class="software-pill">Design Concept</span>
-            </div>
-          </article>
-        </div>
+        <a href="projects.html" class="btn btn-primary">View Projects</a>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Rithik Bala.</p>
-      <p class="footer-command">&gt; cad.gallery: active</p>
+  <!-- POPUP MODAL -->
+  <div class="popup-modal" aria-hidden="true">
+    <div class="popup-backdrop"></div>
+
+    <div class="popup-card">
+      <button class="popup-close" aria-label="Close popup">×</button>
+
+      <div class="popup-image">
+        <img src="" alt="" />
+      </div>
+
+      <div class="popup-content">
+        <span class="popup-category"></span>
+
+        <h2 class="popup-title"></h2>
+
+        <p class="popup-description"></p>
+
+        <div class="popup-meta"></div>
+
+        <div class="popup-tags"></div>
+
+        <a href="#" class="btn btn-primary popup-link" target="_blank">
+          Open Link
+        </a>
+      </div>
     </div>
-  </footer>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
