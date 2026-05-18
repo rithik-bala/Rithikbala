@@ -1,67 +1,125 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Rithik Bala | Mechatronics and Automation Engineer</title>
+  <title>RITHIK BALA | Engineering Archive</title>
 
-  <meta name="description" content="Portfolio of Rithik Bala, a Mechatronics and Automation Engineer focused on robotics, CAD, embedded systems, automation, and intelligent machines." />
+  <meta
+    name="description"
+    content="RITHIK BALA - Mechatronics and Automation Engineer portfolio featuring robotics, CAD, embedded systems, ROS 2, automation and simulation projects."
+  />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
-  <div class="cursor-glow"></div>
-  <div class="noise-layer"></div>
-  <div class="scanline-layer"></div>
-  <div class="scroll-progress" id="scrollProgress"></div>
+  <!-- ================= BOOT LOADER ================= -->
+  <div class="boot-loader" id="bootLoader" aria-hidden="true">
+    <div class="boot-card">
+      <div class="boot-logo">RB</div>
 
-  <header class="site-header" id="siteHeader">
+      <p>ENGINEERING ARCHIVE</p>
+
+      <div class="boot-lines">
+        <span>INITIALIZING PORTFOLIO SYSTEM...</span>
+        <span>LOADING CAD ARCHIVE...</span>
+        <span>SYNCING ROBOTICS MODULES...</span>
+        <span>SYSTEM ONLINE</span>
+      </div>
+
+      <div class="boot-progress">
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= GLOBAL EFFECTS ================= -->
+  <div class="scroll-progress" aria-hidden="true">
+    <span id="scrollProgressBar"></span>
+  </div>
+
+  <div class="cursor-halo" aria-hidden="true"></div>
+  <div class="cursor-dot" aria-hidden="true"></div>
+
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
     <nav class="navbar container">
-      <a href="index.html" class="logo" aria-label="Rithik Bala Home">
-        <span>RB</span>
+      <a href="index.html" class="brand" aria-label="RITHIK BALA Home">
+        <span class="brand-glow"></span>
+        <span class="brand-mark">RB</span>
       </a>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button
+        class="mobile-menu-btn"
+        id="mobileMenuBtn"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
         <span></span>
         <span></span>
       </button>
 
-      <div class="nav-menu" id="navMenu">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="cad-gallery.html" class="nav-link">CAD Gallery</a>
-        <a href="about.html" class="nav-link">About</a>
-        <a href="contact.html" class="nav-link">Contact</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark and light mode">
-          <span class="theme-icon">◐</span>
-        </button>
+      <div class="nav-panel" id="navPanel">
+        <div class="nav-links">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="projects.html" class="nav-link">Projects</a>
+          <a href="cad-gallery.html" class="nav-link">CAD Gallery</a>
+          <a href="freelance.html" class="nav-link">Freelance</a>
+          <a href="about.html" class="nav-link">About</a>
+          <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-tools">
+          <div class="system-clock" id="systemClock">SYS 00:00:00</div>
+
+          <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle theme">
+            <span></span>
+          </button>
+        </div>
       </div>
     </nav>
   </header>
 
+  <!-- ================= SIDE SECTION RAIL ================= -->
+  <aside class="section-rail" aria-label="Homepage sections">
+    <a href="#system-boot">01</a>
+    <a href="#operator-profile">02</a>
+    <a href="#active-missions">03</a>
+    <a href="#system-modules">04</a>
+    <a href="#cad-preview">05</a>
+    <a href="#freelance-preview">06</a>
+    <a href="#signal-channel">07</a>
+  </aside>
+
   <main>
-    <section class="hero home-hero">
-      <video class="hero-video" autoplay muted loop playsinline>
+    <!-- ================= HERO ================= -->
+    <section id="system-boot" class="home-hero page-section">
+      <video class="hero-bg-video" autoplay muted loop playsinline>
         <source src="assets/videos/hero-bg.mp4" type="video/mp4" />
       </video>
 
-      <div class="hero-overlay"></div>
-      <div class="grid-overlay"></div>
+      <div class="hero-video-overlay"></div>
 
-      <div class="container hero-inner">
-        <div class="hero-content reveal">
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
           <p class="eyebrow">
-            <span class="pulse-dot"></span>
-            SYSTEM ONLINE / PORTFOLIO v1.0
+            <span class="status-dot"></span>
+            SYSTEM ONLINE / PORTFOLIO V1.0
           </p>
 
-          <h1 class="hero-title glitch-text" data-text="RITHIK BALA">
-            RITHIK BALA
+          <h1 class="hero-title glitch-hover" data-text="RITHIK BALA">
+            <span>RITHIK</span>
+            <span>BALA</span>
           </h1>
 
-          <h2 class="hero-subtitle">Mechatronics and Automation Engineer</h2>
+          <h2 class="hero-role">Mechatronics and Automation Engineer</h2>
 
           <p class="hero-description">
             Turning mechanical ideas into intelligent machines through robotics,
@@ -71,17 +129,21 @@
           <div class="hero-actions">
             <a href="projects.html" class="btn btn-primary">View Projects</a>
             <a href="cad-gallery.html" class="btn btn-secondary">View CAD Gallery</a>
-            <a href="assets/resume/Rithik_Bala_Resume.pdf" class="btn btn-ghost" target="_blank">Download Resume</a>
+            <a href="assets/files/resume.pdf" target="_blank" class="btn btn-ghost">
+              Download Resume
+            </a>
           </div>
         </div>
 
-        <aside class="hero-dashboard reveal delay-2">
-          <div class="dashboard-card status-card">
-            <div class="card-topline">
+        <aside class="hero-dashboard reveal">
+          <div class="status-card glass-card">
+            <div class="status-top">
               <span>BUILD STATUS</span>
-              <span class="live-indicator">LIVE</span>
+              <strong>LIVE</strong>
             </div>
+
             <h3>Engineering Stack</h3>
+
             <div class="stack-list">
               <span>Robotics</span>
               <span>CAD</span>
@@ -89,126 +151,216 @@
               <span>ROS 2</span>
               <span>Automation</span>
             </div>
+
+            <a href="about.html" class="card-link">OPEN STACK ↗</a>
           </div>
 
-          <div class="dashboard-grid">
-            <div class="mini-panel">
-              <span class="panel-number">07</span>
-              <span class="panel-label">Projects</span>
+          <div class="stats-grid">
+            <div class="stat-card glass-card">
+              <strong data-count="7">0</strong>
+              <span>PROJECTS</span>
             </div>
-            <div class="mini-panel">
-              <span class="panel-number">06</span>
-              <span class="panel-label">CAD Modules</span>
+
+            <div class="stat-card glass-card">
+              <strong data-count="28">0</strong>
+              <span>CAD MODULES</span>
             </div>
-            <div class="mini-panel wide">
-              <span class="panel-number">∞</span>
-              <span class="panel-label">Build Iterations</span>
+
+            <div class="stat-card glass-card stat-wide">
+              <strong>∞</strong>
+              <span>BUILD ITERATIONS</span>
             </div>
           </div>
         </aside>
       </div>
 
-      <div class="hero-ticker" aria-hidden="true">
-  <div class="ticker-track">
-    <div class="ticker-group">
-      <span>ROBOTICS</span>
-      <span>MECHATRONICS</span>
-      <span>CAD DESIGN</span>
-      <span>EMBEDDED SYSTEMS</span>
-      <span>AUTOMATION</span>
-      <span>ROS 2</span>
-      <span>GAZEBO</span>
-      <span>CONTROL SYSTEMS</span>
-      <span>DIGITAL TWINS</span>
-      <span>SIMULATION</span>
-    </div>
-
-    <div class="ticker-group">
-      <span>ROBOTICS</span>
-      <span>MECHATRONICS</span>
-      <span>CAD DESIGN</span>
-      <span>EMBEDDED SYSTEMS</span>
-      <span>AUTOMATION</span>
-      <span>ROS 2</span>
-      <span>GAZEBO</span>
-      <span>CONTROL SYSTEMS</span>
-      <span>DIGITAL TWINS</span>
-      <span>SIMULATION</span>
-    </div>
-  </div>
-</div>
+      <div class="home-marquee">
+        <div class="marquee-track" data-marquee>
+          <span>MECHATRONICS</span>
+          <span>ROBOTICS</span>
+          <span>AUTOMATION</span>
+          <span>ROS 2</span>
+          <span>GAZEBO</span>
+          <span>CONTROL SYSTEMS</span>
+          <span>CAD DESIGN</span>
+          <span>EMBEDDED SYSTEMS</span>
+          <span>DIGITAL TWINS</span>
+          <span>SIMULATION</span>
+        </div>
+      </div>
     </section>
 
-    <section class="section intro-section">
-      <div class="container two-column">
-        <div class="section-heading reveal">
-          <p class="section-kicker">01 / ABOUT</p>
-          <h2>Built for mechanical ideas, coded for motion.</h2>
+    <!-- ================= ABOUT PREVIEW ================= -->
+    <section id="operator-profile" class="home-about-preview page-section section">
+      <div class="container split-preview">
+        <div class="preview-heading reveal">
+          <p class="eyebrow">01 / OPERATOR PROFILE</p>
+
+          <h2>
+            Built for mechanical ideas,<br />
+            coded for motion.
+          </h2>
         </div>
 
-        <div class="section-copy reveal delay-1">
+        <div class="preview-copy reveal">
           <p>
             I am a Mechatronics and Automation student focused on robotics,
             embedded systems, CAD design, automation, and intelligent machines.
             My work connects mechanical structures with electronics, control,
             and software.
           </p>
+
           <p>
             This portfolio is a static engineering archive of my projects,
             experiments, CAD builds, and technical learning path.
           </p>
+
           <a href="about.html" class="text-link">More about me →</a>
         </div>
       </div>
     </section>
 
-    <section class="section skills-section">
+    <!-- ================= FEATURED BUILDS ================= -->
+    <section id="active-missions" class="home-featured page-section section">
       <div class="container">
-        <div class="section-heading centered reveal">
-          <p class="section-kicker">02 / SYSTEM MODULES</p>
-          <h2>Engineering stack</h2>
-          <p>Skill clusters arranged like modules in a robotics control system.</p>
+        <div class="section-top reveal">
+          <div>
+            <p class="eyebrow">02 / ACTIVE MISSIONS</p>
+            <h2>Featured builds</h2>
+          </div>
+
+          <a href="projects.html" class="btn btn-secondary">All Projects</a>
         </div>
 
-        <div class="skills-grid">
-          <article class="skill-card reveal">
-            <span class="skill-index">MOD-01</span>
+        <div class="mission-grid">
+          <article class="mission-card mission-large glass-card reveal">
+            <p class="mission-code">RB-M01 / MISSION 01</p>
+
+            <h3>Hexapod Robot</h3>
+
+            <p>
+              A 6-legged robotic platform using Arduino Nano, PCA9685,
+              MG995 servos, and tripod gait control.
+            </p>
+
+            <div class="mini-tags">
+              <span>Arduino</span>
+              <span>Servo Control</span>
+              <span>Gait</span>
+            </div>
+          </article>
+
+          <article class="mission-card glass-card reveal">
+            <p class="mission-code">RB-M02 / MISSION 02</p>
+
+            <h3>Delta Manipulator</h3>
+
+            <p>
+              Parallel robotic mechanism focused on compact motion and
+              mechanical design.
+            </p>
+
+            <div class="mini-tags">
+              <span>CAD</span>
+              <span>Manipulator</span>
+            </div>
+          </article>
+
+          <article class="mission-card glass-card reveal">
+            <p class="mission-code">RB-M03 / MISSION 03</p>
+
+            <h3>Digital Twin</h3>
+
+            <p>
+              Digital twin direction for simulation and virtual testing of
+              robotic motion.
+            </p>
+
+            <div class="mini-tags">
+              <span>Simulation</span>
+              <span>Robotics</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ENGINEERING STACK ================= -->
+    <section id="system-modules" class="home-stack page-section section">
+      <div class="container">
+        <div class="center-heading reveal">
+          <p class="eyebrow">03 / SYSTEM MODULES</p>
+
+          <h2>Engineering stack</h2>
+
+          <p>
+            Skill clusters arranged like modules in a robotics control system.
+          </p>
+        </div>
+
+        <div class="stack-module-grid">
+          <article class="stack-module glass-card reveal">
+            <p>MOD-01</p>
+
             <h3>Mechanical Design</h3>
-            <p>CAD modeling, mechanisms, robot structures, linkages, and physical design thinking.</p>
-            <div class="tag-row">
+
+            <span>
+              CAD modelling, mechanisms, robot structures, linkages, and
+              physical design thinking.
+            </span>
+
+            <div class="mini-tags">
               <span>CAD</span>
               <span>Mechanisms</span>
               <span>3D Design</span>
             </div>
           </article>
 
-          <article class="skill-card reveal delay-1">
-            <span class="skill-index">MOD-02</span>
+          <article class="stack-module glass-card reveal">
+            <p>MOD-02</p>
+
             <h3>Robotics</h3>
-            <p>Robot motion, gait logic, manipulators, simulation, and system-level integration.</p>
-            <div class="tag-row">
+
+            <span>
+              Robot motion, gait logic, manipulators, simulation, and
+              system-level integration.
+            </span>
+
+            <div class="mini-tags">
               <span>ROS 2</span>
               <span>Gazebo</span>
               <span>Kinematics</span>
             </div>
           </article>
 
-          <article class="skill-card reveal delay-2">
-            <span class="skill-index">MOD-03</span>
+          <article class="stack-module glass-card reveal">
+            <p>MOD-03</p>
+
             <h3>Embedded Systems</h3>
-            <p>Microcontrollers, servo control, sensors, drivers, and hardware-software interaction.</p>
-            <div class="tag-row">
+
+            <span>
+              Microcontrollers, servo control, sensors, drivers, and
+              hardware-software interaction.
+            </span>
+
+            <div class="mini-tags">
               <span>Arduino</span>
               <span>PCA9685</span>
               <span>Sensors</span>
             </div>
           </article>
 
-          <article class="skill-card reveal delay-3">
-            <span class="skill-index">MOD-04</span>
+          <article class="stack-module glass-card reveal">
+            <p>MOD-04</p>
+
             <h3>Software Tools</h3>
-            <p>Programming, GitHub, simulation workflows, documentation, and technical presentation.</p>
-            <div class="tag-row">
+
+            <span>
+              Programming, GitHub, simulation workflows, documentation,
+              and technical presentation.
+            </span>
+
+            <div class="mini-tags">
               <span>Python</span>
               <span>C/C++</span>
               <span>GitHub</span>
@@ -218,113 +370,133 @@
       </div>
     </section>
 
-    <section class="section featured-projects">
-      <div class="container">
-        <div class="section-heading split-heading reveal">
-          <div>
-            <p class="section-kicker">03 / MISSIONS</p>
-            <h2>Featured builds</h2>
-          </div>
-          <a href="projects.html" class="btn btn-secondary small-btn">All Projects</a>
-        </div>
+    <!-- ================= CAD PREVIEW ================= -->
+    <section class="section page-section cad-showcase-section" id="cad-preview">
+      <div class="container cad-showcase-grid">
+        <div class="cad-showcase-copy reveal">
+          <p class="eyebrow">04 / CAD ARCHIVE</p>
 
-        <div class="bento-grid home-bento">
-          <article class="project-card bento-large reveal tilt-card">
-            <div class="mission-label">RB-M01 / MISSION 01</div>
-            <h3>Hexapod Robot</h3>
-            <p>
-              A 6-legged robotic platform using Arduino Nano, PCA9685,
-              MG995 servos, and tripod gait control.
-            </p>
-            <div class="tag-row">
-              <span>Arduino</span>
-              <span>Servo Control</span>
-              <span>Gait</span>
-            </div>
-          </article>
+          <h2>
+            Design iterations,<br />
+            assemblies,<br />
+            and CAD systems.
+          </h2>
 
-          <article class="project-card reveal delay-1 tilt-card">
-            <div class="mission-label">RB-M02 / MISSION 02</div>
-            <h3>Delta Manipulator</h3>
-            <p>Parallel robotic mechanism focused on compact motion and mechanical design.</p>
-            <div class="tag-row">
-              <span>CAD</span>
-              <span>Manipulator</span>
-            </div>
-          </article>
-
-          <article class="project-card reveal delay-2 tilt-card">
-            <div class="mission-label">RB-M03 / MISSION 03</div>
-            <h3>Digital Twin</h3>
-            <p>Digital twin direction for simulation and virtual testing of robotic motion.</p>
-            <div class="tag-row">
-              <span>Simulation</span>
-              <span>Robotics</span>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section cad-preview">
-      <div class="container two-column reverse-mobile">
-        <div class="cad-orbit reveal">
-          <div class="orbit-ring ring-one"></div>
-          <div class="orbit-ring ring-two"></div>
-          <div class="orbit-core">CAD</div>
-        </div>
-
-        <div class="section-heading reveal delay-1">
-          <p class="section-kicker">04 / CAD GALLERY</p>
-          <h2>Mechanical concepts, robot frames, and design studies.</h2>
           <p>
-            A dedicated gallery for CAD renders, mechanisms, manipulators,
-            drone frames, and robotic structures.
+            A visual archive of mechanical concepts, CAD models, assemblies,
+            mechanisms, and design iterations built as part of my engineering
+            learning and robotics workflow.
           </p>
-          <a href="cad-gallery.html" class="btn btn-primary">Open CAD Gallery</a>
+
+          <div class="cad-showcase-actions">
+            <a href="cad-gallery.html" class="btn btn-primary">
+              Open CAD Gallery
+            </a>
+
+            <a href="projects.html" class="btn btn-secondary">
+              View Related Projects
+            </a>
+          </div>
+        </div>
+
+        <div class="cad-showcase-board reveal">
+          <div class="cad-preview-large">
+            <img
+              src="assets/images/Screenshot 2025-04-02 144808.png"
+              alt="CAD model preview"
+            />
+          </div>
+
+          <div class="cad-preview-small">
+            <img
+              src="assets/images/Screenshot 2026-04-10 230436.png"
+              alt="CAD assembly preview"
+            />
+          </div>
+
+          <div class="cad-preview-small">
+            <img
+              src="assets/images/Screenshot 2025-08-09 233923.png"
+              alt="CAD mechanism preview"
+            />
+          </div>
+
+          <a href="cad-gallery.html" class="cad-archive-link glass-card">
+            <div>
+              <span>OPEN FULL CAD ARCHIVE</span>
+              <strong>28 Models</strong>
+            </div>
+
+            <b>↗</b>
+          </a>
         </div>
       </div>
     </section>
 
-    <section class="section profile-links-section">
-      <div class="container">
-        <div class="profile-panel reveal">
-          <div>
-            <p class="section-kicker">05 / CONNECT</p>
-            <h2>Resume, profiles, and build logs.</h2>
-          </div>
+    <!-- ================= FREELANCE PREVIEW ================= -->
+    <section id="freelance-preview" class="section page-section home-freelance-preview">
+      <div class="container final-cta glass-card reveal">
+        <div>
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            05 / FREELANCE SERVICE
+          </p>
 
-          <div class="profile-actions">
-            <a href="assets/resume/Rithik_Bala_Resume.pdf" target="_blank" class="profile-link">Resume</a>
-            <a href="#" class="profile-link">GitHub</a>
-            <a href="#" class="profile-link">LinkedIn</a>
-            <a href="#" class="profile-link">Instagram</a>
-            <a href="#" class="profile-link">YouTube</a>
-          </div>
-        </div>
-      </div>
-    </section>
+          <h2>
+            CAD design and product
+            prototyping support.
+          </h2>
 
-    <section class="section contact-cta">
-      <div class="container">
-        <div class="cta-box reveal">
-          <p class="section-kicker">06 / CONTACT</p>
-          <h2>Let’s build something robotic.</h2>
           <p>
-            Open to internships, collaborations, robotics projects, embedded systems work,
-            CAD design, and automation-focused opportunities.
+            I also provide freelance CAD modelling, product design, renders,
+            drawings, and prototype-ready design support through Fiverr and direct contact.
           </p>
-          <a href="contact.html" class="btn btn-primary">Contact Me</a>
         </div>
+
+        <div class="final-cta-actions">
+          <a href="freelance.html" class="btn btn-primary cta-arrow-btn">
+            <span>View Freelance Page</span>
+            <b>↗</b>
+          </a>
+
+          <a
+            href="https://www.fiverr.com/s/XL4eGm5"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-ghost"
+          >
+            Open Fiverr Gig
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT PREVIEW ================= -->
+    <section id="signal-channel" class="home-contact-preview page-section section">
+      <div class="container contact-preview-card glass-card reveal">
+        <div>
+          <p class="eyebrow">06 / SIGNAL CHANNEL</p>
+
+          <h2>Have a project, collaboration, or internship opportunity?</h2>
+
+          <p>
+            Reach out for robotics, CAD, embedded systems, automation,
+            and technical opportunities.
+          </p>
+        </div>
+
+        <a href="contact.html" class="btn btn-primary cta-arrow-btn">
+          <span>Contact Me</span>
+          <b>↗</b>
+        </a>
       </div>
     </section>
   </main>
 
+  <!-- ================= FOOTER ================= -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© <span id="year"></span> Rithik Bala. Static portfolio built for GitHub Pages.</p>
-      <p class="footer-command">&gt; portfolio.status: online</p>
-    </div>
+    <p>© <span data-year></span> RITHIK BALA</p>
+    <p>Mechatronics • Robotics • CAD • Automation</p>
   </footer>
 
   <script src="js/main.js"></script>
